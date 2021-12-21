@@ -1,0 +1,11 @@
+{
+    "build": {
+      "image": "node:16",
+      "command": "yarn && yarn build && echo $SOME_ENV",
+      "publicDir": "dist",
+      "baseDir": ".",
+      "environment": {
+        "SOME_ENV": "Build finished!"
+      }
+    }
+   }
