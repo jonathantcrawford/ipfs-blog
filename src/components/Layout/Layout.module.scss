@@ -45,3 +45,11 @@
 .content {
     grid-area: ga-content;
 }
+
+
+.card {
+    background-color: var(--color--pavement);
+    padding: 30px;
+
+    border-radius: 15px;
+}
