@@ -1,0 +1,14 @@
+@use '@/styles/vars.scss';
+@use '@/styles/fonts.scss';
+@use '@/styles/markdown.scss';
+
+  
+html {
+    background-color: var(--color--new-pavement);
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
