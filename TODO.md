@@ -1,1 +1,1 @@
--- Store Posts as smart contracts or decentralized database entries
+-- Implement Ceramic Network https://github.com/ceramicstudio/ceramic-starter

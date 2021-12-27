@@ -1,11 +1,14 @@
 .layout {
     padding: 40px;
 
+    width: calc(100vw - 80px);
+
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 40px auto;
     grid-template-areas:
         "ga-title"
+        "."
         "ga-content";
 }
 
@@ -20,23 +23,44 @@
 }
 
 .content {
+    width: 100%;
     grid-area: ga-content;
     place-self: center;
 }
 
 .posts {
+    width: 100%;
 
-}
+    .post {
+        text-decoration: none;
 
-.post-link {
+        display: flex;
+        flex-direction: column;
 
+        &__title {
+            font-family: var(--font--fira-mono);
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--color--road-guard);
+        }
+
+        &__summary {
+            margin-top: 10px;
+
+            font-family: var(--font--martel);
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--color--road-guard);
+        }
+
+    }
 }
 
 .post {
-
-}
-
-.back-to-posts {
+    border-radius: 15px;
+    border: 1px solid var(--color--white);
     
+    padding: 20px;
 }
+
 
