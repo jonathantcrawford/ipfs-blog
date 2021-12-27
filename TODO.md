@@ -1,0 +1,1 @@
+-- Store Posts as smart contracts or decentralized database entries

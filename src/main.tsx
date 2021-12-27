@@ -4,10 +4,8 @@ import ReactDOM from 'react-dom';
 import { Layout } from '@/components/Layout/Layout';
 
 
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
-
-import { AnimatePresence, motion } from 'framer-motion';
 
 import '@/styles/index.scss';
 
