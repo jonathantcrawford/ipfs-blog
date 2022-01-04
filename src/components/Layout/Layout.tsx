@@ -38,10 +38,10 @@ const Posts = () => {
           to='/how-to-host-a-site-on-ipfs'
           className={css['post']}>
             <span className={css['post__title']}>
-              How To Host A Site On IPFS
+              🔥 How To Host A Site On IPFS
             </span>
             <span className={css['post__summary']}>
-              brief summary about how to host a site on ipfs
+              A brief walkthrough using Fleek.co to host sites on IPFS.
             </span>
         </MotionNavLink>
     </div>
@@ -96,7 +96,7 @@ const Content = () => {
 export const Layout = () => {
     return (
         <div className={css['layout']}>
-            <div className={css['title']}>WEB3 CONSTRUCTION ZONE</div>
+            <div className={css['title']}>👷🏻‍♂️ WEB3 CONSTRUCTION ZONE</div>
             <Content/>
         </div>
     );

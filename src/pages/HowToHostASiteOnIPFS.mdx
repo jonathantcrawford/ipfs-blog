@@ -1,8 +1,46 @@
 import { Counter } from '@/components/Counter';
 
-# How To Host A Site On IPFS
+# 🔥 How To Host A Site On IPFS
 
-This text is written in Markdown.
+## Terminology
+
+**HTTP (HyperText Transfer Protocol)** is an open source protocol for computers to communicate over a network.
+
+**IPFS (InterPlanetary File System)** is an open source protocol for storing and sharing data on a peer-to-peer network. [ipfs.io](https://ipfs.io/)
+
+**DNS (Domain Name System)** a system which maps human friendly names to IP addressses.
+
+**CDN (Content Delivery Network)**
+
+
+## What's are the differences between HTTP and IPFS?
+
+HTTP can be thought of as a way for computers to directly communicate with one another. When an HTTP request is made, the device is sending some data to a specific location.
+When you open an empty tab in your browser and navigate to the url `https://google.com` your network request connects with a DNS to lookup the IP address associated with the domain you are requesting.
+If the domain is registered, the request is routed accordingly and the server at `google.com` sends a reponse (HTML) back to your computer.
+
+IPFS can be thought of as a giant file system, where each file or directory has a unique identifier called a hash. So when you make a request via IPFS you are looking for a specific file or directory, but you don't care where it comes from.
+
+
+## What are the benefits of hosting a static site using IPFS?
+
+### 💰 Cost
+When data is requested from IPFS, you are searching for anyone on the network that has the file you are looking for. 
+Then you store the file locally on the node you are running on your machine.
+As a result, that file is now accessible from two locations, the node you downloaded the file from and your own node.
+
+So the next time you request the same file, you will retrieve it from your own storage as opposed to downloading it from some where else.
+
+The more visitors your site attracts, the more available it becomes on the peer-to-peer network, like an organic peer-to-peer CDN.
+
+With less traffic coming to your server, your server costs are reduced.
+
+
+### ⛔️ Censorship
+Files on IPFS are organically replicated. If someone tries to block traffic to your site or forces you to turn your server off, the file is still out there indefinitely on the system.
+Some call IPFS the *permanent web* because deleting every copy of the file from every node is near to impossible.
+
+
 
 MDX allows Rich React components to be used directly in Markdown: <Counter/>
 
