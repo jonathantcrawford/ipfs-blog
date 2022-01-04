@@ -4,6 +4,10 @@ h1 {
     font-weight: 700;
 
     color: var(--color--road-paint-white);
+
+    background-color: var(--color--new-pavement);
+    padding: 2vh;
+    border-radius: 1vh;
 }
 
 h2 {
@@ -27,7 +31,7 @@ a {
     font-size: 2vh;
     font-weight: 400;
 
-    color: var(--color--safety-vest);
+    color: var(--color--road-paint-yellow);
 }
 
 code {
@@ -38,7 +42,11 @@ code {
 }
 
 strong {
-    color: var(--color--road-paint-white);
+    color: var(--color--road-paint-yellow);
+}
+
+em {
+    color: var(--color--road-paint-yellow);
 }
 
 p {

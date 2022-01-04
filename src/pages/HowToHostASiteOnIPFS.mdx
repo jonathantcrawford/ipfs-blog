@@ -4,14 +4,13 @@ import { Counter } from '@/components/Counter';
 
 ## Terminology
 
-**HTTP (HyperText Transfer Protocol)** is an open source protocol for computers to communicate over a network.
+**[HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)** is an open source protocol for computers to communicate over a network.
 
-**IPFS (InterPlanetary File System)** is an open source protocol for storing and sharing data on a peer-to-peer network. [ipfs.io](https://ipfs.io/)
+**[IPFS](https://ipfs.io/)** is an open source protocol for storing and sharing data on a peer-to-peer network.
 
-**DNS (Domain Name System)** a system which maps human friendly names to IP addressses.
+**[DNS](https://developer.mozilla.org/en-US/docs/Glossary/DNS)** a system which maps human friendly names to IP addressses.
 
-**CDN (Content Delivery Network)**
-
+**[CDN](https://developer.mozilla.org/en-US/docs/Glossary/CDN)** a group of servers spread out in different locations.
 
 ## What's are the differences between HTTP and IPFS?
 
@@ -21,22 +20,20 @@ If the domain is registered, the request is routed accordingly and the server at
 
 IPFS can be thought of as a giant file system, where each file or directory has a unique identifier called a hash. So when you make a request via IPFS you are looking for a specific file or directory, but you don't care where it comes from.
 
-
 ## What are the benefits of hosting a static site using IPFS?
 
 ### 💰 Cost
+
 When data is requested from IPFS, you are searching for anyone on the network that has the file you are looking for. 
 Then you store the file locally on the node you are running on your machine.
 As a result, that file is now accessible from two locations, the node you downloaded the file from and your own node.
 
 So the next time you request the same file, you will retrieve it from your own storage as opposed to downloading it from some where else.
-
 The more visitors your site attracts, the more available it becomes on the peer-to-peer network, like an organic peer-to-peer CDN.
-
 With less traffic coming to your server, your server costs are reduced.
 
-
 ### ⛔️ Censorship
+
 Files on IPFS are organically replicated. If someone tries to block traffic to your site or forces you to turn your server off, the file is still out there indefinitely on the system.
 Some call IPFS the *permanent web* because deleting every copy of the file from every node is near to impossible.
 
