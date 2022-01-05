@@ -41,6 +41,25 @@ code {
     color: var(--color--traffic-display);
 }
 
+pre {
+    padding: 1.2vh 1.2vh;
+    border-radius: 0.4vh;
+    background-color: var(--color--new-pavement);
+
+    font-size: 1.618vh;
+
+
+
+    > code {
+        background-color: unset;
+        padding: unset;
+        border-radius: unset;
+    }
+
+}
+
+
+
 strong {
     color: var(--color--road-paint-yellow);
 }
@@ -49,10 +68,42 @@ em {
     color: var(--color--road-paint-yellow);
 }
 
-p {
+li, p {
     font-family: var(--font--martel);
     font-size: 2vh;
     font-weight: 400;
 
     color: var(--color--road-guard);
+}
+
+
+ul {
+    li {
+        &::marker {
+            color: var(--color--hard-hat);
+
+
+        }
+
+        input {
+            & ~ ::marker {
+                content: "";
+            }
+        }
+    }
+}
+
+blockquote {
+    background-color: var(--color--hard-hat);
+
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 1em;
+    margin-inline-end: 1em;
+}
+
+input[type="checkbox"]:disabled ~ *::marker {
+
+    padding: 40px;
+    content: "";
 }

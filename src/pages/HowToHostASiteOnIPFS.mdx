@@ -1,5 +1,11 @@
 import { Counter } from '@/components/Counter';
 
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import syntaxHighlighterTheme from 'react-syntax-highlighter/dist/esm/styles/hljs/vs2015';
+
+
+
+
 # 🔥 How To Host A Site On IPFS
 
 ## Terminology
@@ -12,7 +18,7 @@ import { Counter } from '@/components/Counter';
 
 **[CDN](https://developer.mozilla.org/en-US/docs/Glossary/CDN)** a group of servers spread out in different locations.
 
-## What's are the differences between HTTP and IPFS?
+## What are the differences between HTTP and IPFS?
 
 HTTP can be thought of as a way for computers to directly communicate with one another. When an HTTP request is made, the device is sending some data to a specific location.
 When you open an empty tab in your browser and navigate to the url `https://google.com` your network request connects with a DNS to lookup the IP address associated with the domain you are requesting.
@@ -37,6 +43,41 @@ With less traffic coming to your server, your server costs are reduced.
 Files on IPFS are organically replicated. If someone tries to block traffic to your site or forces you to turn your server off, the file is still out there indefinitely on the system.
 Some call IPFS the *permanent web* because deleting every copy of the file from every node is near to impossible.
 
+
+
+
+## Walkthrough Guide
+
+- Clone repo [repo link](https://github.com/jonathantcrawford/blog)
+- Setup Fleek Account
+- Create new hosting project
+- Add `.fleek.json` to project root
+
+<SyntaxHighlighter language="json" style={syntaxHighlighterTheme}>
+{`{
+    "build": {
+        "image": "node:16",
+        "command": "yarn && yarn build && echo $SOME_ENV",
+        "publicDir": "dist",
+        "baseDir": ".",
+        "environment": {
+            "SOME_ENV": "Build finished!"
+        }
+    }
+}`}
+</SyntaxHighlighter>
+
+- Create Git Repo
+
+- Purchase Domain from Namebase
+- Setup HDNS [HDNS Setup](https://www.hdns.io/#macos)
+
+
+## Markdown Test
+- [ ] unchecked todo
+- [x] checked
+
+> blockquote element
 
 
 MDX allows Rich React components to be used directly in Markdown: <Counter/>
