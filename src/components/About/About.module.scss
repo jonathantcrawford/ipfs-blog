@@ -1,0 +1,21 @@
+.about {
+    margin-top: 1em;
+    font-family: var(--font--inter);
+    font-weight: 600;
+    font-size: 2vh;
+    color: var(--color--road-guard);
+
+    div {
+        max-width: 200mm;
+        margin-bottom: 2em;
+        line-height: 1.618em;
+    }
+
+    a {
+        font-family: var(--font--inter);
+        font-size: 2vh;
+        font-weight: 700;
+        
+        text-decoration: none;
+    }
+}

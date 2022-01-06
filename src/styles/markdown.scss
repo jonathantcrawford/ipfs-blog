@@ -5,9 +5,10 @@ h1 {
 
     color: var(--color--road-paint-white);
 
-    background-color: var(--color--new-pavement);
+
     padding: 2vh;
     border-radius: 1vh;
+    border: 0.05vmin solid var(--color--road-paint-white);
 }
 
 h2 {
@@ -31,26 +32,29 @@ a {
     font-size: 2vh;
     font-weight: 400;
 
+    text-decoration: none;
+
     color: var(--color--road-paint-yellow);
+
+    &:hover {
+        color: var(--color--traffic-display);
+    }
 }
 
 code {
     padding: 0.3vh 0.6vh;
     border-radius: 0.4vh;
     background-color: var(--color--new-pavement);
-    color: var(--color--traffic-display);
+    color: var(--color--safety-vest);
 }
 
 pre {
     padding: 1.2vh 1.2vh;
     border-radius: 0.4vh;
-    background-color: var(--color--new-pavement);
-
     font-size: 1.618vh;
 
-
-
     > code {
+        color: unset;
         background-color: unset;
         padding: unset;
         border-radius: unset;
@@ -59,13 +63,12 @@ pre {
 }
 
 
-
 strong {
-    color: var(--color--road-paint-yellow);
+    color: var(--color--white);
 }
 
 em {
-    color: var(--color--road-paint-yellow);
+    color: var(--color--white);
 }
 
 li, p {
@@ -80,30 +83,26 @@ li, p {
 ul {
     li {
         &::marker {
-            color: var(--color--hard-hat);
+            color: var(--color--road-paint-white);
 
 
-        }
-
-        input {
-            & ~ ::marker {
-                content: "";
-            }
         }
     }
 }
 
 blockquote {
-    background-color: var(--color--hard-hat);
+    background-color: var(--color--dirt-wet);
+    border-radius: 0.4vh;
 
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 1em;
-    margin-inline-end: 1em;
-}
+    * {
+        color: var(--color--dirt-dry);
 
-input[type="checkbox"]:disabled ~ *::marker {
+        padding: 1em;
+    }
+    
 
-    padding: 40px;
-    content: "";
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0em;
+    margin-inline-end: 0em;
 }

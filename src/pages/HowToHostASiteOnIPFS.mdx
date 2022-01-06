@@ -1,8 +1,4 @@
-import { Counter } from '@/components/Counter';
-
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import syntaxHighlighterTheme from 'react-syntax-highlighter/dist/esm/styles/hljs/vs2015';
-
+import { CodeSnippet } from '@/components/CodeSnippet/CodeSnippet';
 
 
 
@@ -53,19 +49,7 @@ Some call IPFS the *permanent web* because deleting every copy of the file from 
 - Create new hosting project
 - Add `.fleek.json` to project root
 
-<SyntaxHighlighter language="json" style={syntaxHighlighterTheme}>
-{`{
-    "build": {
-        "image": "node:16",
-        "command": "yarn && yarn build && echo $SOME_ENV",
-        "publicDir": "dist",
-        "baseDir": ".",
-        "environment": {
-            "SOME_ENV": "Build finished!"
-        }
-    }
-}`}
-</SyntaxHighlighter>
+<CodeSnippet/>
 
 - Create Git Repo
 
@@ -77,15 +61,3 @@ Some call IPFS the *permanent web* because deleting every copy of the file from 
 #### Notes
 - Not PCI Compliant
 - SSL Certificates are not supported
-
-
-
-## Markdown Test
-- [ ] unchecked todo
-- [x] checked
-
-> blockquote element
-
-
-MDX allows Rich React components to be used directly in Markdown: <Counter/>
-

@@ -1,0 +1,40 @@
+.posts {
+    width: 100%;
+
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-auto-flow: row;
+    grid-gap: 5vh;
+
+    .post {
+        border-radius: 2vmin;
+        border: 0.05vmin solid var(--color--road-paint-yellow);
+        padding: 3vmin;
+        
+        text-decoration: none;
+
+        display: flex;
+        flex-direction: column;
+
+        color: var(--color--road-paint-yellow);
+
+        &__title {
+            font-family: var(--font--fira-mono);
+            font-size: 3vh;
+            font-weight: 700;
+        }
+
+        &__summary {
+            margin-top: 10px;
+            font-family: var(--font--martel);
+            font-size: 2vh;
+            font-weight: 400;
+        }
+
+        &:hover {
+            color: var(--color--traffic-display);
+            border-color: var(--color--traffic-display);
+        }
+
+    }
+}

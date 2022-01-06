@@ -1,0 +1,33 @@
+.layout {
+
+    min-height: 100vh;
+    max-width: 100vw;
+
+    display: grid;
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: 5vh min-content 5vh auto 5vh min-content;
+    grid-template-areas:
+        ". . ."
+        ". layout-header ."
+        ". . ."
+        ". layout-content ."
+        ". . ."
+        "layout-footer layout-footer layout-footer";
+
+    
+    &__header {
+        grid-area: layout-header;
+    }
+
+    &__content {
+        width: 100%;
+        grid-area: layout-content;
+    }
+
+    &__footer {
+        width: 100%;
+        grid-area: layout-footer;
+        place-self: center;
+    }
+
+}

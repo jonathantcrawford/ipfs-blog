@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+}
+
+.title {
+    font-family: var(--font--inter);
+    font-size: 2vh;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--color--road-paint-yellow);
+    
+
+    &__first-name {
+        margin-right: 0.2em;
+    }
+
+    &__last-name {
+        filter: grayscale(10%);
+    }
+    
+}

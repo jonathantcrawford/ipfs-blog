@@ -1,4 +1,9 @@
 @font-face {
+    font-family: 'Inter';
+    src: url('@/assets/fonts/Inter/Inter-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'Dot-Matrix';
     src: url('@/assets/fonts/Dot-Matrix/Dot-Matrix-Regular.ttf') format('truetype');
     font-weight: 400;
