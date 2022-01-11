@@ -1,4 +1,4 @@
-import {  Route, Routes, NavLink, Outlet, useLocation } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 import css from './Header.module.scss'
 

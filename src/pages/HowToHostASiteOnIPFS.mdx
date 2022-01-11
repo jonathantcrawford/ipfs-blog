@@ -1,5 +1,17 @@
 import { CodeSnippet } from '@/components/CodeSnippet/CodeSnippet';
 
+import Screenshot_1URL from '@/assets/images/how-to-host-a-site-on-ipfs/screenshot_1.png';
+import Screenshot_2URL from '@/assets/images/how-to-host-a-site-on-ipfs/screenshot_2.png';
+import Screenshot_3URL from '@/assets/images/how-to-host-a-site-on-ipfs/screenshot_3.png';
+import Screenshot_4URL from '@/assets/images/how-to-host-a-site-on-ipfs/screenshot_4.png';
+import Screenshot_5URL from '@/assets/images/how-to-host-a-site-on-ipfs/screenshot_5.png';
+import Screenshot_6URL from '@/assets/images/how-to-host-a-site-on-ipfs/screenshot_6.png';
+import Screenshot_7URL from '@/assets/images/how-to-host-a-site-on-ipfs/screenshot_7.png';
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 
 # 🔥 How To Host A Site On IPFS
@@ -44,20 +56,68 @@ Some call IPFS the *permanent web* because deleting every copy of the file from 
 
 ## Walkthrough Guide
 
-- Clone repo [repo link](https://github.com/jonathantcrawford/blog)
-- Setup Fleek Account
-- Create new hosting project
-- Add `.fleek.json` to project root
-
-<CodeSnippet/>
-
-- Create Git Repo
+### Recommended Tools
+- Create React App / Vite / NextJS (or any node/webpack based front end framework).
+- [Brave Browser](https://brave.com/). It has built in IPFS and Web3 Wallet support.
 
 
-### Setting up your own TLD
-- Purchase Domain from Namebase
-- Setup HDNS [HDNS Setup](https://www.hdns.io/#macos)
+### Steps
+1. Create a new repo or clone this one. <a href="https://github.com/jonathantcrawford/blog" target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
+2. Setup a Fleek Account at [Fleek.co](https://fleek.co/)
+3. Select "Hosting" from the side bar and click "Add New Site"
+   <img src={Screenshot_1URL}/>
+4. Connect with Github.
+   <img src={Screenshot_2URL}/>
+5. Select a repo.
+   <img src={Screenshot_3URL}/>
+6. Select "IPFS" from the Hosting Service dropdown.
+   <img src={Screenshot_4URL}/>
+7. Choose the branch you want to deploy when commits are pushed. 
+   If you are using one of the frameworks listed, feel free to select it. Otherwise, select "Other" for now. Then click "Deploy Site".
+   <img src={Screenshot_5URL}/>
+8. You now have a configured Fleek Project! You can now view an overview of your project as well as a list of deployments and other settings.
+  <img src={Screenshot_6URL}/>
+10. If you selected "Other" as your framework, during the project setup, your build most likely failed. It's because we still need to setup the build actions for the repo.
+    To fix this all we have to do is add a new file `.fleek.json` to the root of the repo.
+    <CodeSnippet string={`{
+        "build": {
+            "image": "node:16",
+            "command": "yarn && yarn build && echo $SOME_ENV",
+            "publicDir": "dist",
+            "baseDir": ".",
+            "environment": {
+                "SOME_ENV": "Build finished!"
+            }
+        }
+    }`}/>
+    This file let's you specify a docker image, a build command, a build directory and base directory. You can also pass in environment variables to build command.
+    (If you have environment variables that are secret, then you can configure the deployment configuration in the Fleek interface instead of using a `.fleek.json` file.
+11. Once you have added your `.fleek.json` and pushed your changes. A new deployment should be triggered.
+12. Fleek automatically creates a url for your site using the following format `{projectName}.on.fleek.co`.
+13. You can now setup an existing domain name if you own one.
 
-#### Notes
-- Not PCI Compliant
-- SSL Certificates are not supported
+
+### ENS and HNS Domains
+Fleek supports ENS and HNS Domains and they are fairly simple to setup.
+However, purchasing an ENS or HNS domain is a little more time consuming and tidious.
+The easiest way to obtain an HNS domain is through [Namebase](https://www.namebase.io/).
+(You will have to signup and add funds to your account in order to bid on available domains.)
+Once you place a bid and win an auction you can now point your domain to your IPFS hosted site!
+
+Fleek makes this really easy. Just go to the "Domain Management" section of your Fleek project and scroll to the "HNS" section.
+<img src={Screenshot_7URL}/>
+Click "Add HNS" and then follow the instructions. [Fleek Domain Management Support](https://docs.fleek.co/domain-management/hns-domains/)
+
+### HNS Domain Limitations
+HNS domains are not resolved by typical DNS servers.
+There are a few ways to resolve HNS domains, the easiest way is to edit your default DNS server on your computers network settings.
+The Handshake community maintains a DNS server that acts as a traditional DNS with the added support for resolving HNS domains. [HDNS Setup](https://www.hdns.io/#macos)
+
+One final note, HNS domains do not support SSL and are therefore not PCI compliant. 
+So, deploying a production application to an HNS domain is not very practical as of now.
+However, the HNS team has made a lot of progress and I'm looking forward to what they do next.
+
+
+## Summary
+IPFS is an awesome new web protocol! Although, it is not fully integrated into the most popular browsers, I believe it will be soon enough.
+Which is why I decided to host this blog at both [blog.joncrawford.me](https://blog.joncrawford.me) and [blog.jonathantcrawford](http://blog.jonathantcrawford)

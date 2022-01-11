@@ -3,4 +3,19 @@
 
     background-color: var(--color--new-pavement);
     min-height: 40mm;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    svg {
+        font-size: 5vh;
+        color: var(--color--road-paint-yellow);
+
+        &:hover {
+            cursor: pointer;
+            color: var(--color--traffic-display);
+        }
+    }
 }

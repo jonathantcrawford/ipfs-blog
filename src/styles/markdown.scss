@@ -27,6 +27,14 @@ h3 {
     color: var(--color--road-paint-white);
 }
 
+h4 {
+    font-family: var(--font--rokkitt);
+    font-size: 2vh;
+    font-weight: 500;
+
+    color: var(--color--road-paint-white);
+}
+
 a {
     font-family: var(--font--martel);
     font-size: 2vh;
@@ -77,6 +85,8 @@ li, p {
     font-weight: 400;
 
     color: var(--color--road-guard);
+
+    margin-bottom: 1em;
 }
 
 
@@ -88,6 +98,11 @@ ul {
 
         }
     }
+}
+
+img {
+    margin-top: 1em;
+    width: 100%;
 }
 
 blockquote {

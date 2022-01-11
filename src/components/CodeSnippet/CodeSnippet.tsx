@@ -9,17 +9,7 @@ export const CodeSnippet = ({string}: any) => {
         <section className={css['code-snippet']}>
             <code className={css['file-name']}>.fleek.json</code>
             <SyntaxHighlighter language="json" style={syntaxHighlighterTheme}>
-{`{
-    "build": {
-        "image": "node:16",
-        "command": "yarn && yarn build && echo $SOME_ENV",
-        "publicDir": "dist",
-        "baseDir": ".",
-        "environment": {ß
-            "SOME_ENV": "Build finished!"
-        }
-    }
-}`}
+                {string}
             </SyntaxHighlighter>
         </section>
 
