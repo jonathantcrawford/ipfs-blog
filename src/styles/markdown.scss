@@ -1,123 +1,117 @@
 h1 {
-    font-family: var(--font--fira-mono);
-    font-size: 5vh;
-    font-weight: 700;
+  font-family: var(--font--fira-mono);
+  font-size: 5vh;
+  font-weight: 700;
 
-    color: var(--color--road-paint-white);
+  color: var(--color--road-paint-white);
 
-
-    padding: 2vh;
-    border-radius: 1vh;
-    border: 0.05vmin solid var(--color--road-paint-white);
+  padding: 2vh;
+  border-radius: 1vh;
+  border: 0.05vmin solid var(--color--road-paint-white);
 }
 
 h2 {
-    font-family: var(--font--rokkitt);
-    font-size: 4vh;
-    font-weight: 500;
+  font-family: var(--font--rokkitt);
+  font-size: 4vh;
+  font-weight: 500;
 
-    color: var(--color--road-paint-white);
+  color: var(--color--road-paint-white);
 }
 
 h3 {
-    font-family: var(--font--rokkitt);
-    font-size: 3vh;
-    font-weight: 500;
+  font-family: var(--font--rokkitt);
+  font-size: 3vh;
+  font-weight: 500;
 
-    color: var(--color--road-paint-white);
+  color: var(--color--road-paint-white);
 }
 
 h4 {
-    font-family: var(--font--rokkitt);
-    font-size: 2vh;
-    font-weight: 500;
+  font-family: var(--font--rokkitt);
+  font-size: 2vh;
+  font-weight: 500;
 
-    color: var(--color--road-paint-white);
+  color: var(--color--road-paint-white);
 }
 
 a {
-    font-family: var(--font--martel);
-    font-size: 2vh;
-    font-weight: 400;
+  font-family: var(--font--martel);
+  font-size: 2vh;
+  font-weight: 400;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    color: var(--color--road-paint-yellow);
+  color: var(--color--road-paint-yellow);
 
-    &:hover {
-        color: var(--color--traffic-display);
-    }
+  &:hover {
+    color: var(--color--traffic-display);
+  }
 }
 
 code {
-    padding: 0.3vh 0.6vh;
-    border-radius: 0.4vh;
-    background-color: var(--color--new-pavement);
-    color: var(--color--safety-vest);
+  padding: 0.3vh 0.6vh;
+  border-radius: 0.4vh;
+  background-color: var(--color--new-pavement);
+  color: var(--color--safety-vest);
 }
 
 pre {
-    padding: 1.2vh 1.2vh;
-    border-radius: 0.4vh;
-    font-size: 1.618vh;
+  padding: 1.2vh 1.2vh;
+  border-radius: 0.4vh;
+  font-size: 1.618vh;
 
-    > code {
-        color: unset;
-        background-color: unset;
-        padding: unset;
-        border-radius: unset;
-    }
-
+  > code {
+    color: unset;
+    background-color: unset;
+    padding: unset;
+    border-radius: unset;
+  }
 }
 
-
 strong {
-    color: var(--color--white);
+  color: var(--color--white);
 }
 
 em {
-    color: var(--color--white);
+  color: var(--color--white);
 }
 
-li, p {
-    font-family: var(--font--martel);
-    font-size: 2vh;
-    font-weight: 400;
+li,
+p {
+  font-family: var(--font--martel);
+  font-size: 2vh;
+  font-weight: 400;
 
-    color: var(--color--road-guard);
+  color: var(--color--road-guard);
 
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
-
 
 ul {
-    li {
-        &::marker {
-            color: var(--color--road-paint-white);
-
-
-        }
+  li {
+    &::marker {
+      color: var(--color--road-paint-white);
     }
+  }
 }
 
 img {
-    margin-top: 1em;
-    width: 100%;
+  margin-top: 1em;
+  width: 100%;
 }
 
 blockquote {
-    background-color: var(--color--dirt-wet);
-    border-radius: 0.4vh;
+  background-color: var(--color--dirt-wet);
+  border-radius: 0.4vh;
 
-    * {
-        color: var(--color--dirt-dry);
+  * {
+    color: var(--color--dirt-dry);
 
-        padding: 1em;
-    }
-    
+    padding: 1em;
+  }
 
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0em;
-    margin-inline-end: 0em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0em;
+  margin-inline-end: 0em;
 }

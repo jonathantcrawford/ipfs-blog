@@ -1,19 +1,18 @@
-@use '@/styles/vars.scss';
-@use '@/styles/fonts.scss';
-@use '@/styles/markdown.scss';
-@use '@/styles/layout.scss';
+@use "@/styles/vars.scss";
+@use "@/styles/fonts.scss";
+@use "@/styles/markdown.scss";
+@use "@/styles/layout.scss";
 
-  
 html {
-    background-color: var(--color--black);
+  background-color: var(--color--black);
 }
 
 body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *::-webkit-scrollbar {
-    width: 0px;
+  width: 0px;
 }

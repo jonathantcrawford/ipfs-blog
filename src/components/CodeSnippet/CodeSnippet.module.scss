@@ -1,17 +1,17 @@
 .code-snippet {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    code.file-name {
-        border-radius: 0.4vh 0.4vh 0vh 0vh;
-        background-color: var(--color--new-pavement);
-        color: var(--color--safety-vest);
-        padding: 0.6vh 0.6vh;
-    }
+  code.file-name {
+    border-radius: 0.4vh 0.4vh 0vh 0vh;
+    background-color: var(--color--new-pavement);
+    color: var(--color--safety-vest);
+    padding: 0.6vh 0.6vh;
+  }
 
-    pre {
-        margin-top: 0em;
+  pre {
+    margin-top: 0em;
 
-        border-radius: 0vh 0vh 0.4vh 0.4vh;
-    }
+    border-radius: 0vh 0vh 0.4vh 0.4vh;
+  }
 }

@@ -1,21 +1,21 @@
 .about {
-    margin-top: 1em;
+  margin-top: 1em;
+  font-family: var(--font--inter);
+  font-weight: 600;
+  font-size: 2vh;
+  color: var(--color--road-guard);
+
+  div {
+    max-width: 200mm;
+    margin-bottom: 1em;
+    line-height: 1.618em;
+  }
+
+  a {
     font-family: var(--font--inter);
-    font-weight: 600;
     font-size: 2vh;
-    color: var(--color--road-guard);
+    font-weight: 700;
 
-    div {
-        max-width: 200mm;
-        margin-bottom: 1em;
-        line-height: 1.618em;
-    }
-
-    a {
-        font-family: var(--font--inter);
-        font-size: 2vh;
-        font-weight: 700;
-        
-        text-decoration: none;
-    }
+    text-decoration: none;
+  }
 }
