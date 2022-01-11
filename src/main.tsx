@@ -84,7 +84,7 @@ export const AnimatedRoutes = () => {
         <Route path="/*" element={<AnimatedLayout />}>
           <Route index element={<Home />} />
           <Route
-            path="how-to-host-a-site-on-ipfs"
+            path="*"
             element={<HowToHostASiteOnIPFS />}
           />
         </Route>
