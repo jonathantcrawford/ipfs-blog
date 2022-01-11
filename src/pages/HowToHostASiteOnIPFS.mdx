@@ -30,7 +30,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 HTTP can be thought of as a way for computers to directly communicate with one another. When an HTTP request is made, the device is sending some data to a specific location.
 When you open an empty tab in your browser and navigate to the url `https://google.com` your network request connects with a DNS to lookup the IP address associated with the domain you are requesting.
-If the domain is registered, the request is routed accordingly and the server at `google.com` sends a reponse (HTML) back to your computer.
+If the domain is registered, the request is routed accordingly and the server at `google.com` sends a response (HTML) back to your computer.
 
 IPFS can be thought of as a giant file system, where each file or directory has a unique identifier called a hash. So when you make a request via IPFS you are looking for a specific file or directory, but you don't care where it comes from.
 
@@ -90,7 +90,7 @@ Some call IPFS the *permanent web* because deleting every copy of the file from 
             }
         }
     }`}/>
-    This file let's you specify a docker image, a build command, a build directory and base directory. You can also pass in environment variables to build command.
+    This file lets you specify a docker image, a build command, a build directory and base directory. You can also pass in environment variables to build command.
     (If you have environment variables that are secret, then you can configure the deployment configuration in the Fleek interface instead of using a `.fleek.json` file.
 11. Once you have added your `.fleek.json` and pushed your changes. A new deployment should be triggered.
 12. Fleek automatically creates a url for your site using the following format `{projectName}.on.fleek.co`.
