@@ -3,10 +3,10 @@ import syntaxHighlighterTheme from "react-syntax-highlighter/dist/esm/styles/hlj
 
 import css from "./CodeSnippet.module.scss";
 
-export const CodeSnippet = ({ string }: any) => {
+export const CodeSnippet = ({ string, fileName }: any) => {
   return (
     <section className={css["code-snippet"]}>
-      <code className={css["file-name"]}>.fleek.json</code>
+      <code className={css["file-name"]}>{fileName}</code>
       <SyntaxHighlighter language="json" style={syntaxHighlighterTheme}>
         {string}
       </SyntaxHighlighter>

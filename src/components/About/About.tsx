@@ -4,10 +4,10 @@ export const About = () => {
   return (
     <div className={css["about"]}>
       <div>
-        I work at Lunchbox Inc. as a Software Engineer on the Innovation Team.
+        Enter a brief description about yourself.
       </div>
-      <div>I am interested in design systems, web3 and user experiences.</div>
-      <div>I am currently living in Austin, TX.</div>
+      <div>Include some of your interests and passions.</div>
+      <div>Maybe add something funny or charming.</div>
     </div>
   );
 };

@@ -8,19 +8,25 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 
+// replace with your own social media profile urls
+const mediumURL = "https://medium.com/";
+const githubURL = "https://github.com/";
+const twitterURL = "https://twitter.com/";
+const linkedinURL = "https://www.linkedin.com/in/";
+
 export const Footer = () => {
   return (
     <div className={css["footer"]}>
-      <a href="https://medium.com/@jonathantcrawford" target="_blank">
+      <a href={mediumURL} target="_blank">
         <FontAwesomeIcon icon={faMediumM} />
       </a>
-      <a href="https://github.com/jonathantcrawford" target="_blank">
+      <a href={githubURL} target="_blank">
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a href="https://twitter.com/jon_t_craw" target="_blank">
+      <a href={twitterURL} target="_blank">
         <FontAwesomeIcon icon={faTwitter} />
       </a>
-      <a href="https://www.linkedin.com/in/jonathantcrawford/" target="_blank">
+      <a href={linkedinURL} target="_blank">
         <FontAwesomeIcon icon={faLinkedinIn} />
       </a>
     </div>
