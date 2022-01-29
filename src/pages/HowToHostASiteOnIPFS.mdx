@@ -57,7 +57,7 @@ Some call IPFS the _permanent web_ because deleting every copy of the file from 
 
 ### Steps
 
-1. Create a new repo or clone this one. <a href="https://github.com/jonathantcrawford/blog" target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
+1. Create a new repo or clone this one. <a href="https://github.com/jonathantcrawford/blog/tree/fleek" target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
 2. Setup a Fleek Account at [Fleek.co](https://fleek.co/)
 3. Select "Hosting" from the side bar and click "Add New Site"
    <img src={Screenshot_1URL} />
@@ -75,6 +75,7 @@ Some call IPFS the _permanent web_ because deleting every copy of the file from 
 9. If you selected "Other" as your framework, during the project setup, your build most likely failed. It's because we still need to setup the build actions for the repo.
    To fix this all we have to do is add a new file `.fleek.json` to the root of the repo.
    <CodeSnippet
+      fileName={'.fleek.json'}
      string={`{
     "build": {
         "image": "node:16",
@@ -122,4 +123,4 @@ However, the HNS team has made a lot of progress and I'm looking forward to what
 ## Summary
 
 IPFS is an awesome new web protocol! Although, it is not fully integrated into the most popular browsers, I believe it will be soon enough.
-Which is why I decided to host this blog at both [blog.joncrawford.me](https://blog.joncrawford.me) and [blog.jonathantcrawford](http://blog.jonathantcrawford)
+Until that day, do your own experimentation with IPFS. I hope this tutorial and repo helps you on your journey.
