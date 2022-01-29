@@ -11,17 +11,12 @@ import Screenshot_7URL from "@/assets/images/how-to-host-a-site-on-ipfs/screensh
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-# 🔥 How To Host A Site On IPFS
+# The web has gone interplanetary.
+Not really, but the web is evolving rapidly towards decentralization.
+To some, decentralization has become a motto or a phrase of rebellion against tech companies.
+The reality is, that decentralization is an alternative network architecture with pros and cons.
 
-## Terminology
-
-**[HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)** is an open source protocol for computers to communicate over a network.
-
-**[IPFS](https://ipfs.io/)** is an open source protocol for storing and sharing data on a peer-to-peer network.
-
-**[DNS](https://developer.mozilla.org/en-US/docs/Glossary/DNS)** a system which maps human friendly names to IP addresses.
-
-**[CDN](https://developer.mozilla.org/en-US/docs/Glossary/CDN)** a group of servers spread out in different locations.
+Using IPFS for static site or single page applications hosting has some neat benefits.
 
 ## What are the differences between HTTP and IPFS?
 
@@ -48,6 +43,16 @@ With less traffic coming to your server, your server costs are reduced.
 Files on IPFS are organically replicated. If someone tries to block traffic to your site or forces you to turn your server off, the file is still out there indefinitely on the system.
 Some call IPFS the _permanent web_ because deleting every copy of the file from every node is near to impossible.
 
+## Extra References
+
+**[HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)** is an open source protocol for computers to communicate over a network.
+
+**[IPFS](https://ipfs.io/)** is an open source protocol for storing and sharing data on a peer-to-peer network.
+
+**[DNS](https://developer.mozilla.org/en-US/docs/Glossary/DNS)** a system which maps human friendly names to IP addresses.
+
+**[CDN](https://developer.mozilla.org/en-US/docs/Glossary/CDN)** a group of servers spread out in different locations.
+
 ## Walkthrough Guide
 
 ### Recommended Tools
@@ -57,21 +62,21 @@ Some call IPFS the _permanent web_ because deleting every copy of the file from 
 
 ### Steps
 
-1. Create a new repo or clone this one. <a href="https://github.com/jonathantcrawford/blog" target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
+1. Create a new repo or clone this one. <a alt="github repo" rel="noreferrer" href="https://github.com/jonathantcrawford/blog" target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
 2. Setup a Fleek Account at [Fleek.co](https://fleek.co/)
 3. Select "Hosting" from the side bar and click "Add New Site"
-   <img src={Screenshot_1URL} />
+   <img alt="screenshot_1" src={Screenshot_1URL}/>
 4. Connect with Github.
-   <img src={Screenshot_2URL} />
+   <img alt="screenshot_2" src={Screenshot_2URL}/>
 5. Select a repo.
-   <img src={Screenshot_3URL} />
+   <img alt="screenshot_3" src={Screenshot_3URL}/>
 6. Select "IPFS" from the Hosting Service dropdown.
-   <img src={Screenshot_4URL} />
+   <img alt="screenshot_4" src={Screenshot_4URL}/>
 7. Choose the branch you want to deploy when commits are pushed.
    If you are using one of the frameworks listed, feel free to select it. Otherwise, select "Other" for now. Then click "Deploy Site".
-   <img src={Screenshot_5URL} />
+   <img alt="screenshot_5" src={Screenshot_5URL}/>
 8. You now have a configured Fleek Project! You can now view an overview of your project as well as a list of deployments and other settings.
-   <img src={Screenshot_6URL} />
+   <img alt="screenshot_6" src={Screenshot_6URL}/>
 9. If you selected "Other" as your framework, during the project setup, your build most likely failed. It's because we still need to setup the build actions for the repo.
    To fix this all we have to do is add a new file `.fleek.json` to the root of the repo.
    <CodeSnippet
@@ -97,7 +102,7 @@ Some call IPFS the _permanent web_ because deleting every copy of the file from 
 11. Fleek automatically creates a url for your site using the following format `{projectName}.on.fleek.co`.
 12. You can now setup an existing domain name if you own one.
 
-### ENS and HNS Domains
+## ENS and HNS Domains
 
 Fleek supports ENS and HNS Domains and they are fairly simple to setup.
 However, purchasing an ENS or HNS domain is a little more time consuming and tedious.
@@ -107,20 +112,21 @@ Once you place a bid and win an auction you can now point your domain to your IP
 
 Fleek makes this really easy. Just go to the "Domain Management" section of your Fleek project and scroll to the "HNS" section.
 
-<img src={Screenshot_7URL} />
+<img alt="screenshot_7" src={Screenshot_7URL}/>
 Click "Add HNS" and then follow the instructions. [Fleek Domain Management Support](https://docs.fleek.co/domain-management/hns-domains/)
 
-### HNS Domain Limitations
+## HNS Domain Limitations
 
 HNS domains are not resolved by typical DNS servers.
 There are a few ways to resolve HNS domains, the easiest way is to edit your default DNS server on your computers network settings.
 The Handshake community maintains a DNS server that acts as a traditional DNS with the added support for resolving HNS domains. [HDNS Setup](https://www.hdns.io/#macos)
 
 One final note, HNS domains do not support SSL and are therefore not PCI compliant.
-So, deploying a production application to an HNS domain is not very practical as of now.
+So, deploying a production application to an HNS domain is not very practical.
 However, the HNS team has made a lot of progress and I'm looking forward to what they do next.
 
 ## Summary
 
-IPFS is an awesome new web protocol! Although, it is not fully integrated into the most popular browsers, I believe it will be soon enough.
+IPFS is a practical decentralized file system that can coexist with centralized applications.
+Although, it is not fully integrated into the most popular browsers, I believe it will be soon enough.
 Until that day, do your own experimentation with IPFS. I hope this tutorial and repo helps you on your journey.

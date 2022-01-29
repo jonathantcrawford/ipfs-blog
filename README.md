@@ -13,6 +13,7 @@
 - Clone this repo
 - install dependencies `yarn`
 - run `yarn dev`
+- Read the example post at `http://localhost:3001/#/how-to-host-a-site-on-ipfs`
 - Follow the steps in TODO.md
 
 ## Assets
